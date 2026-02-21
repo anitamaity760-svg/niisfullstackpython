@@ -1,4 +1,4 @@
-5 #area of triangle.
+4.# area of triangle.
 print("enter base")
 b=float(input())
 print("enter height")
