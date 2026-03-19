@@ -1,0 +1,4 @@
+# using slicing multiple value delet.
+L=[10,20,30,40,50]
+del L[1:3:1]
+print(L)
