@@ -2,8 +2,8 @@
    3 2 1
    2 1
    1"""
-n=4
-for i in range(n,0,-1):
+
+for i in range(4,0,-1):
     for j in range(i,0,-1):
         print(j,end="\t")
     print() 
