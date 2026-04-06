@@ -1,0 +1,5 @@
+f=open("sita.txt","a+")
+f.write("hi")
+f.seek(0)
+print(f.read())
+f.close()
