@@ -10,4 +10,4 @@ for no in range(1,100001,1):
 		str=str+f
 		temp=temp//10
 	if no==str:
-	    print(no,"is strong no")   		
+	    print(no,"is strong no")   

@@ -1,3 +1,4 @@
+# a+(append with read)
 f=open("sita.txt","aE+")
 f.write("ram is a good boy")
 f.seek(0)

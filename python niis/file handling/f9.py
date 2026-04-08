@@ -1,3 +1,4 @@
+# what is random access file.
 f=open("data.txt","r")
 f.seek(10)
 print(f.read())

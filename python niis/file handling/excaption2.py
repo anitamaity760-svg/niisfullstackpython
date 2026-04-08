@@ -1,3 +1,4 @@
+# write 3 student record into file.
 import pickle
 class student:
 	def __init__(self,roll,name,mark):
