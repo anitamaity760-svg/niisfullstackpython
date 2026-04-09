@@ -1,0 +1,24 @@
+from tkinter import *
+def add():
+	n1=int(e1.get())
+	n2=int(e2.get())
+	result=n1+n2
+	lbl.config(text="result="+str(result))
+root=Tk()
+root.title("addition app")
+root.geometry("300x200")
+
+Label(root,text="enter first number").pack()
+e1=Entry(root)
+e1.pack()	
+
+Label(root,text="enter second number").pack()
+e2=Entry(root)
+e2.pack()
+
+Button(root,text="add",command=add).pack()
+
+lbl=Label(root,text="")	
+lbl.pack()
+
+root.mainloop()
