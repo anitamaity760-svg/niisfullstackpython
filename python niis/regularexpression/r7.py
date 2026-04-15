@@ -1,4 +1,4 @@
-# use txt.
+#7.  use txt.
 import re
 txt = "The rain in spain"
 X = re.findall("[a-d]",txt)

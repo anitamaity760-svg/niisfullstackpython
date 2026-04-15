@@ -1,4 +1,4 @@
-# re.split().
+#5. re.split().
 import re
 result = re.split(r'\d+','abc123def456')
 print(result)

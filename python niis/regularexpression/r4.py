@@ -1,4 +1,4 @@
-# re.sub().
+#4. re.sub().
 import re
 result = re.sub(r'\d+','X','abc123def456')
 print(result)
