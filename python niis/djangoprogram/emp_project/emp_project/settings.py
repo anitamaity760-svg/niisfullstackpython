@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -19,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)n1(zn-ss=s=nn19==i8#gg-u5=lb_3==t!vn&vfekm^ys_fd='
+SECRET_KEY = 'django-insecure-iio2@ehac_$jjh*vfc0j%k5mac(n$%trx)(pr0))#_bhrlbk#&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -67,13 +68,18 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'emp_project.wsgi.application'
+
+
+# Database
+# https://docs.djangoproject.com/en/6.0/ref/settings/#databases
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'empdb.sqlite3',
-    }
+        'NAME': BASE_DIR / 'empdb.db',
 }
 
+}
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 

@@ -7,6 +7,7 @@
     <h2>Enter Student Details</h2>
 
     <form method="post">
+        {% csrf_token %}
         
         Roll No: <input type="number" name="rollno"><br><br>
         Name: <input type="text" name="name"><br><br>
