@@ -45,6 +45,5 @@ class LinkedList:
 obj = LinkedList()
 obj.create()
 obj.display()
-obj.insertbeg(5)
+obj.insertbeg()
 obj.display()
-               

@@ -32,19 +32,22 @@ class LinkedList:
         while ptr != None:
             print(ptr.data)
             ptr = ptr.next
-    def insertbeg(self,data):
-        cur=Node(data)
-        print("data insert end") 
+    def deleteend(self):
         if self.head==None:
-            self.head-cur
+            print("no element")
+            return
+        if self.head.next==None:    
+            print("delete element=",self.head.data)
+            self.head=None
             return
         ptr=self.head
-        while ptr.next!=None:
-            ptr=ptr.next
-        ptr.next=cur        
+        while ptr.next.next!=None:
+            ptr=ptr.next 
+        print("delete element=",ptr.next.data)
+        ptr.next=None       
+
 obj = LinkedList()
 obj.create()
 obj.display()
-obj.insertbeg(5)
+obj.deleteend()
 obj.display()
-               

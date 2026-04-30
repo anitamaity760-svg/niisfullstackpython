@@ -1,9 +1,9 @@
-# Linked List Create and Display using OOP Concept
+#  single circular Linked List Create and Display using OOP Concept
 class Node:
-    def __init__(self, ele):
+    def __init__(self,ele):
         self.data = ele
         self.next = None
-class LinkedList:
+class CLinkedList:
     def __init__(self):
         self.head = None
     def create(self):
@@ -19,32 +19,26 @@ class LinkedList:
                 self.head = cur
             else:
                 ptr.next = cur
+                cur.next=self.head #new add
             ptr = cur
-            print("Do you continue? Press True/False")
+
+            print("Do you continue? Press y/n")
             ch = input()
-            if ch == "True":
+
+            if ch == "y":
                 ch = True
             else:
                 ch = False
+
     def display(self):
-        print("Elements are")
+        print("Element are ")
         ptr = self.head
-        while ptr != None:
+        while ptr.next != self.head:
             print(ptr.data)
             ptr = ptr.next
-    def insertbeg(self,data):
-        cur=Node(data)
-        print("data insert end") 
-        if self.head==None:
-            self.head-cur
-            return
-        ptr=self.head
-        while ptr.next!=None:
-            ptr=ptr.next
-        ptr.next=cur        
-obj = LinkedList()
+        print(ptr.data)    
+    
+
+obj =CLinkedList()
 obj.create()
 obj.display()
-obj.insertbeg(5)
-obj.display()
-               

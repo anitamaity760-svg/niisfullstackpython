@@ -1,9 +1,10 @@
-# Linked List Create and Display using OOP Concept
+#  DoubleLinked List Create and Display using OOP Concept
 class Node:
     def __init__(self, ele):
+        self.prev=None #new add
         self.data = ele
         self.next = None
-class LinkedList:
+class DLinkedList:
     def __init__(self):
         self.head = None
     def create(self):
@@ -19,32 +20,41 @@ class LinkedList:
                 self.head = cur
             else:
                 ptr.next = cur
+                cur.prev=ptr #new add
             ptr = cur
+
             print("Do you continue? Press True/False")
             ch = input()
+
             if ch == "True":
                 ch = True
             else:
                 ch = False
-    def display(self):
-        print("Elements are")
+
+    def displayf(self):
+        if self.head==None:
+            print("no element ")
+            return 
+        print("Elements are forward")
         ptr = self.head
+
         while ptr != None:
             print(ptr.data)
             ptr = ptr.next
-    def insertbeg(self,data):
-        cur=Node(data)
-        print("data insert end") 
+    def displayb(self):
         if self.head==None:
-            self.head-cur
+            print("no element ")
             return
+        print("elements in backward")
         ptr=self.head
         while ptr.next!=None:
             ptr=ptr.next
-        ptr.next=cur        
-obj = LinkedList()
+        while ptr!=None:
+            print(ptr.data)
+            ptr=ptr.prev
+
+
+obj =DLinkedList()
 obj.create()
-obj.display()
-obj.insertbeg(5)
-obj.display()
-               
+obj.displayf()
+obj.displayb()
